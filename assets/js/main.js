@@ -36,9 +36,14 @@
 				$("#navi ul").css('margin-top',-0.9*(1280-win_width)/544+"em");
 			}
 			else {
-				$("#nav_top ul li").css('margin','0 1em')
+				$("#nav_top ul li").css('margin','0 1em');
+
 				$("#navi").css('height',Math.round(736*0.113));
 				$("#header").css('height',Math.round(736*0.47));
+
+				$("#navi ul li a").css('font-size',(2.5-0.8*((1280-736)/544))+"em");
+				$("#nav_up").css('font-size',(2.5-0.8*((1280-736)/544))+"em");
+				$("#navi ul").css('margin-top',-0.9*(1280-736)/544+"em");
 			}
 			if (win_width<840){
 				$("#navi").css("background-image", 'url("assets/css/images/navbar_mobile.svg")')
