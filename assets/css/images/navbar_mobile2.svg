@@ -1,0 +1,12 @@
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='3200px' height='460px' viewBox='0 0 3200 460' zoomAndPan='disable'>
+	<style type='text/css'><![CDATA[
+		line { stroke-width: 1px; }
+		line.upper { stroke: rgba(255,255,255,0.1); }
+	]]>
+	</style>
+		<polygon points='0,100 3200,100,1600,460' class='one' fill="#3c2c3c"  fill-opacity='0.95'/>
+
+		<line x1='1600' y1='0' x2='1600' y2='460' class='upper'/>
+		<line x1='0' y1='82' x2='1600' y2='442' class='upper' />
+		<line x1='1600' y1='442' x2='3200' y2='82' class='upper' />
+</svg>

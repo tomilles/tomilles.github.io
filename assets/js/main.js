@@ -3,11 +3,7 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
-// function offsetAnchor() {
-// 	if (location.hash.length !== 0) {
-// 	  window.scrollTo(window.scrollX, window.scrollY - 146);
-// 	}
-//   }
+
 
 (function($) {
 
@@ -24,41 +20,78 @@
 			mobilep:   [ null,      '480px'  ]
 		});
 	// Play initial animations on page load.
+		// $( document ).ready(function() {
+		// 	$("#navi").css('height',Math.round(win_width*0.113));
+		// });
+		function fit_navbar() {
+			var win_width = window.outerWidth;
+			if (win_width > 736){
+				$("#nav_top ul li").css('margin','0 '+(4-3*(1280-win_width)/544)+"em");
+
+				$("#navi").css('height',Math.round(win_width*0.113));
+				$("#header").css('height',Math.round(win_width*0.47));
+
+				$("#navi ul li a").css('font-size',(2.5-0.8*((1280-win_width)/544))+"em");
+				$("#nav_up").css('font-size',(2.5-0.8*((1280-win_width)/544))+"em");
+				$("#navi ul").css('margin-top',-0.9*(1280-win_width)/544+"em");
+			}
+			else {
+				$("#navi").css('height',Math.round(736*0.113));
+				$("#header").css('height',Math.round(736*0.47));
+			}
+			if (win_width<840){
+				$("#navi").css("background-image", 'url("assets/css/images/navbar_mobile.svg")')
+			}
+			else if (win_width<1280){
+				$("#navi").css("background-image", 'url("assets/css/images/navbar_mobile2.svg")')
+			}
+			else{
+				$("#navi").css("background-image", 'url("assets/css/images/navbar.svg")');
+			}
+		}
+
 		$window.on('load', function() {
+			fit_navbar();			
 			window.setTimeout(function() {
 				$body.removeClass('is-preload');
 			}, 100);
+			
+		});
+		$(window).resize(function () {
+			fit_navbar();
 		});
 
 		$(window).scroll(function() {
-	 
-			if ($(this).scrollTop() > 430){ 
-				$('#navi').show(200);
-				$('#nav_up').show(200);
+			// var win_width = window.outerWidth;
+			// if (win_width > 736){
+			// 	$("#navi").css('height',Math.round(win_width*0.113));
+			// 	$("#header").css('height',Math.round(win_width*0.47));
+			// }
+			fit_navbar();
+			var header_height= parseInt($("#header").css('height'));
+			if ($(this).scrollTop() > Math.round(0.69*header_height)){ 
+				// $('#navi').fadeIn(200);
+				// $('#nav_up').fadeIn(200);
+				$('#navi').show(300);
+				$('#nav_up').show(300);
 			}
 			else{
-				$('#navi').hide(150);
-				$('#nav_up').hide(150);
+				$('#navi').fadeOut(150);
+				$('#nav_up').fadeOut(100);
 		}});
-		// AN ALTERNATIVE VERSION FOR NAVBAR APPEARANCE that is not working yet...
-		// $(function() {
-		// 	$('header').scrollex({
-		// 		scroll: function(progress) {
 
-		// 			// Progressively increase #foobar's opacity as we scroll through it.
-		// 			$("navi ul li a").css('opacity', Math.max(0, Math.min(1, progress)));
-			
-		// 		}
-		// 	});
-		// });
 
 		$(document).on('click', 'a[href^="#"]', function (event) {
 			event.preventDefault();
-			// console.log($.attr(this, 'href'))
-			if ($.attr(this, 'href')=="#footer")
-				var my_offset = -60;
+			if ($.attr(this, 'href')=="#footer"){
+				if (window.outerWidth < 736){
+					var my_offset = parseInt($("#navi").css("height"))-164.5;
+				}
+				else
+					var my_offset = parseInt($("#navi").css("height"))-207;
+			}	
 			else 
-				var my_offset = 146;
+				var my_offset = parseInt($("#navi").css("height"));
 			$('html, body').animate({
 				scrollTop: $($.attr(this, 'href')).offset().top - my_offset
 			}, 400);
@@ -86,7 +119,6 @@
 					$("#navi ul li a[href='"+$(this).attr('href')+"']")
 						.addClass('active')
 						.addClass('active-locked');
-						// console.log("class added");
 				});
 		
 		$nav_a
@@ -107,7 +139,6 @@
 					$this
 						.addClass('active')
 						.addClass('active-locked');
-						// console.log("class added");
 				});
 
 		$("#nav_up a").on('click', function(){
@@ -118,7 +149,6 @@
 		// var $sections=$("#main div[id]")
 		// $sections.each(function(){
 		// 	$section="#"+this["id"];
-		// 	console.log($section)
 	
 		
 		$(function() {
@@ -135,7 +165,6 @@
 						return;
 					if ($('#navi ul li a').hasClass('active-locked')){
 						$('#navi ul li a[href="#home"]').removeClass('active-locked');
-						console.log('active locked');
 						return;
 					}
 						
@@ -154,7 +183,6 @@
 						return;
 					if ($('#navi ul li a').hasClass('active-locked')){
 						$('#navi ul li a[href="#work"]').removeClass('active-locked');
-						console.log('active locked');
 						return;
 					}
 					$('#navi ul li a').removeClass('active');
@@ -172,7 +200,6 @@
 						return;
 					if ($('#navi ul li a').hasClass('active-locked')){
 						$('#navi ul li a[href="#footer"]').removeClass('active-locked');
-						console.log('active locked');
 						return;
 					}
 					$('#navi ul li a').removeClass('active');
@@ -184,23 +211,20 @@
 				}
 			});
 		});
-		$(document).on('click', 'a[href^="#"]', function (event) {
-			event.preventDefault();
-			// console.log($.attr(this, 'href'))
-			if ($.attr(this, 'href')=="#footer")
-				var my_offset = -60;
-			else 
-				var my_offset = 146;
-			$('html, body').animate({
-				scrollTop: $($.attr(this, 'href')).offset().top - my_offset
-			}, 400);
-		});
+		// $(document).on('click', 'a[href^="#"]', function (event) {
+		// 	event.preventDefault();
+		// 	if ($.attr(this, 'href')=="#footer")
+		// 		var my_offset = -60;
+		// 	else 
+		// 		var my_offset = 146;
+		// 	$('html, body').animate({
+		// 		scrollTop: $($.attr(this, 'href')).offset().top - my_offset
+		// 	}, 400);
+		// });
 			// .each(function() {
 			// 	var	$this = $(this),
 			// 		id = $this.attr('href'),
 			// 		$section = $(id);
-			// 		// console.log(id);
-			// 		// console.log($section);
 			// 		if ($section.length < 1)
 			// 			return;
 			// 		$section.scrollex({
