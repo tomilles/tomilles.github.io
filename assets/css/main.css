@@ -2549,10 +2549,10 @@ input, select, textarea {
 					margin: 0 0.5em 0 0.5em;
 					opacity: 0.35;
 					outline: 0;
-					-moz-transition: opacity .1s ease-in-out;
-					-webkit-transition: opacity .1s ease-in-out;
-					-ms-transition: opacity .1s ease-in-out;
-					transition: opacity .1s ease-in-out;
+					-moz-transition: opacity .2s ease-in-out;
+					-webkit-transition: opacity .2s ease-in-out;
+					-ms-transition: opacity .2s ease-in-out;
+					transition: opacity .2s ease-in-out;
 				}
 		#navi ul li a:hover {
 				opacity: 1;
@@ -2568,10 +2568,10 @@ input, select, textarea {
 			position: absolute;
 			background: #222222;
 			color: #ffffff;
-			top: -2.75em;
+			top: -2.5em;
 			font-size: 0.3em;
 			height: 2em;
-			line-height: 2.25em;
+			line-height: 2em;
 			left: 50%;
 			opacity: 0;
 			-moz-transition: opacity .25s ease-in-out;
@@ -2586,7 +2586,7 @@ input, select, textarea {
 				content: '';
 				display: block;
 				position: absolute;
-				bottom: -0.4em;
+				bottom: -0.3em;
 				left: 50%;
 				margin-left: -0.6em;
 				border-top: solid 0.6em #222222;
@@ -2596,7 +2596,21 @@ input, select, textarea {
 			#navi ul li a:hover span {
 				opacity: 1.0;
 			}
-
+	#myspan{
+		opacity: 0;
+		font: 150%  bolder, serif;
+		/* font-size: 100%; */
+		/* font: 100%  bolder, serif; */
+		font-family: Courier New;
+		position: relative;
+		top: 0.5em;
+		/* top:-0.1em; */
+		-moz-transition: opacity .2s ease-in-out;
+		-webkit-transition: opacity .2s ease-in-out;
+		-ms-transition: opacity .2s ease-in-out;
+		transition: opacity .2s ease-in-out;
+		
+	}
 
 	#nav_top {
 		text-align: center;
@@ -3264,6 +3278,9 @@ input, select, textarea {
 			h3 {
 				font-size: 1.15em;
 			}
+			/* #navi ul li a{
+				font-size: 2.5em;
+			} */
 
 		/* Section/Article */
 
