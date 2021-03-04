@@ -2518,6 +2518,7 @@ input, select, textarea {
 		background-position: bottom center;
 		background-repeat: repeat;
 		background-size: 3200px 460px;
+		/* background-size: 3200px 180px; */
 	}
 	
 		#navi ul {
@@ -3091,6 +3092,8 @@ input, select, textarea {
 	#footer {
 		background-attachment: scroll;
 		background-color: #4eb980;
+		/* background-color: #5FABC1; */
+		/* background-color: #C96FCD; */
 		background-image: url("images/bottom-3200.svg");
 		background-position: top center;
 		background-repeat: repeat-x;
@@ -3278,9 +3281,7 @@ input, select, textarea {
 			h3 {
 				font-size: 1.15em;
 			}
-			/* #navi ul li a{
-				font-size: 2.5em;
-			} */
+			
 
 		/* Section/Article */
 
