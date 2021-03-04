@@ -34,10 +34,14 @@
 			var ratio = (screen_width-win_width)/difference;
 
 			var ratio_2 = Math.abs((screen_width-736)/difference);
-			console.log('screen:',screen_width,'window',win_width,'diff',difference,'ratio',ratio)
+			// console.log('screen:',screen_width,'window',win_width,'diff',difference,'ratio',ratio)
 
-			$("#nav_top ul li").css('margin','0 '+(4-3*(screen_width-win_width)/(1.65*difference))+"em");
+			// $("#nav_top ul li").css('margin','0 '+(4-3*(screen_width-win_width)/(1.65*difference))+"em");
+			// $("#nav_top ul li").css('margin','0 0.7em');
+			$("#nav_top ul li").css('margin','0 '+(4-3.3*ratio*0.5)+"em");
 			if (win_width > 736){
+				// $("#nav_top ul li").css('margin','0 '+(4-3.3*ratio)+"em");
+
 				$("#myspan").css('top',0.5-0.6*ratio+'em');
 				$("#myspan").css('font-size',150-50*ratio+'%');
 
@@ -54,6 +58,8 @@
 				$("#navi").css("background-size", "3200px "+(460-280*ratio)+"px");
 			}
 			else {
+				// $("#nav_top ul li").css('margin','0 '+(4-3.3*ratio_2)+"em");
+
 				$("#myspan").css('top',(0.5-0.6*ratio_2)+'em');
 				$("#myspan").css('font-size',(150-50*ratio_2)+'%');
 
