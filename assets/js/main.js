@@ -29,18 +29,28 @@
 			var win_width = window.outerWidth;
 
 
-			var difference = Math.abs(screen_width - 736);
+			var difference = Math.abs(screen_width - 736)+0.001;
 
 			var ratio = (screen_width-win_width)/difference;
+			// var myratio_2 = (320-736)/544;
 
 			var ratio_2 = Math.abs((screen_width-736)/difference);
 			// console.log('screen:',screen_width,'window',win_width,'diff',difference,'ratio',ratio)
 
 			// $("#nav_top ul li").css('margin','0 '+(4-3*(screen_width-win_width)/(1.65*difference))+"em");
-			// $("#nav_top ul li").css('margin','0 0.7em');
-			$("#nav_top ul li").css('margin','0 '+(4-3.3*ratio*0.5)+"em");
+			var li_margin = parseInt($("#nav_top ul li").css('margin-right'));
+			
+			var a_width = parseInt($("#nav_top ul li a").css('width'));
+			var a_margin = (win_width - 8*li_margin - 4*a_width)/10;
+			console.log(a_margin);
+			$("#nav_top ul li a").css('margin','0 '+a_margin+'px');
+			// var my_max = screen_width - 4*a_width - 8*li_margin
+			// IDEA: change the margin dynamically according to the window size e.g. split screen width into 4 and use that
+
+			// console.log($("#nav_top ul li").css('margin-right'),screen.width,$("#nav_top ul li a").css('width'),$("#nav_top ul li").css('width'));
+			// $("#nav_top ul li").css('margin','0 '+(4-3.3*myratio*0.55)+"em");
 			if (win_width > 736){
-				// $("#nav_top ul li").css('margin','0 '+(4-3.3*ratio)+"em");
+				// $("#nav_top ul li").css('margin','0 '+(4-3.7*ratio)+"em");
 
 				$("#myspan").css('top',0.5-0.6*ratio+'em');
 				$("#myspan").css('font-size',150-50*ratio+'%');

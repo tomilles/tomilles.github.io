@@ -2637,7 +2637,7 @@ input, select, textarea {
 				-ms-transition: margin 0.2s ease;
 				transition: margin 0.2s ease;
 				display: inline-block;
-				margin: 0 4em;
+				margin: 0 9px;
 				padding: 0;
 				vertical-align: middle;
 			}
