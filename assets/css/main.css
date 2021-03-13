@@ -2470,6 +2470,16 @@ input, select, textarea {
 				ul.icons li a:hover, ul.icons li span:hover {
 					background: rgba(224, 224, 224, 0.15);
 				}
+/* AVATAR */
+
+#avatar {
+	z-index: 1000;
+	/* opacity: 1; */
+	display: block;
+	position: relative;
+}
+
+
 /* Nav */
 	
 	
@@ -2622,11 +2632,12 @@ input, select, textarea {
 		width: 100%;
 		margin-left: -50%;
 		padding-top: 2em;
+		margin-bottom: -2em;
 		z-index: 2;
 	}
 	
 		#nav_top ul {
-			/* margin: 0; */
+			margin: 0;
 			padding: 0;
 			list-style: none;
 			
@@ -3017,7 +3028,7 @@ input, select, textarea {
 			left: 50%;
 			position: absolute;
 			width: 1px;
-			z-index: 0;
+			/* z-index: 0; */
 		}
 
 		#header:before {
