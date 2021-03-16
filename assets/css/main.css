@@ -2523,9 +2523,7 @@ input, select, textarea {
 			opacity: 0.5;
 			position: relative;
 	}
-	#nav_up a:hover {
-		opacity: 1.0;
-	}
+	
 
 	#navi {
 		text-align: center;
@@ -2580,9 +2578,7 @@ input, select, textarea {
 					-ms-transition: opacity .2s ease-in-out;
 					transition: opacity .2s ease-in-out;
 				}
-		#navi ul li a:hover {
-				opacity: 1;
-			}
+		
 		
 		#navi ul li a.active {
 			opacity: 1;
@@ -2619,9 +2615,7 @@ input, select, textarea {
 				border-left: solid 0.6em transparent;
 				border-right: solid 0.6em transparent;
 			} 
-			#navi ul li a:hover span {
-				opacity: 1.0;
-			}
+			
 	#myspan{
 		opacity: 0;
 		font: 150%  bolder, serif;
@@ -2684,9 +2678,7 @@ input, select, textarea {
 					-ms-transition: opacity .3s ease-in-out;
 					transition: opacity .3s ease-in-out;
 				}
-		#nav_top ul li a:hover {
-				opacity: 1;
-			}
+		
 		
 
 		
@@ -2721,9 +2713,8 @@ input, select, textarea {
 				border-left: solid 0.6em transparent;
 				border-right: solid 0.6em transparent;
 			} 
-			#nav_top ul li a:hover span {
-				opacity: 1.0;
-			}
+		
+			
 		
 			#nav_top.anchor {
 				position: relative;
@@ -2748,6 +2739,23 @@ input, select, textarea {
 
 		}
 
+		@media (hover: hover){
+			#nav_top ul li a:hover span {
+				opacity: 1.0;
+			}
+			#nav_up a:hover {
+				opacity: 1.0;
+			}
+			#navi ul li a:hover {
+				opacity: 1;
+			}
+			#navi ul li a:hover span {
+				opacity: 1.0;
+			}
+			#nav_top ul li a:hover {
+				opacity: 1;
+			}
+		}
 /* Wrapper */
 
 	#wrapper {

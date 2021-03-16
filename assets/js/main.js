@@ -20,9 +20,7 @@
 			mobilep:   [ null,      '480px'  ]
 		});
 	// Play initial animations on page load.
-		// $( document ).ready(function() {
-		// 	$("#navi").css('height',Math.round(win_width*0.113));
-		// });
+	
 		function fit_navbar() {
 
 			
@@ -174,6 +172,7 @@
 					$nav_a
 						.removeClass('active')
 						.removeClass('active-locked');
+				
 					// $("#myspan").css('opacity',0);
 						
 
@@ -313,8 +312,7 @@
 						$('#navi ul li a[href="#footer"]').removeClass('active-locked');
 						return;
 					}
-					// $('#myspan').text('contact');
-					// $('#myspan').css('opacity',1);
+				
 					$('#myspan').css('opacity',0);
 					setTimeout(() => {
 						$('#myspan').text('contact');
