@@ -24,79 +24,80 @@
 		// 	$("#navi").css('height',Math.round(win_width*0.113));
 		// });
 		function fit_navbar() {
-			var screen_width = screen.width;
+
 			
 			var win_width = window.outerWidth;
 
 
-			var difference = Math.abs(screen_width - 736)+0.001;
 
-			var ratio = (screen_width-win_width)/difference;
+			var ratio = win_width/1280;
 
-			var ratio_min = Math.abs((screen_width-736)/difference);
-			console.log('screen:',screen_width,'window',win_width,'diff',difference,'ratio',ratio)
+			var ratio_min = 736/1280;
 
-			// $("#nav_top ul li").css('margin','0 '+(4-3*(screen_width-win_width)/(1.65*difference))+"em");
-			var li_margin = parseInt($("#nav_top ul li").css('margin-right'));
+
+			$("#nav_top ul li").css('margin','0 '+3.8*ratio+'em');
 			
-			var a_width = parseInt($("#nav_top ul li a").css('width'));
-			var a_margin = (win_width - 8*li_margin - 4*a_width)/15;
-			$("#nav_top ul li a").css('margin','0 '+a_margin+'px');
-			// if (ratio == 0){
-			// 	ratio=(1280-win_width)/
-			// }
-			// PROBLEMS WHEN RATIO==0
 
+			console.log(ratio);
+			if (736 < win_width && win_width < 1280){
+				$("#header").css('height',Math.round(688*ratio));
+				$("#avatar img").css("height",(250*ratio)+'px');
+				$("#avatar").css("background-size",(270*ratio)+'px');
+				$("#nav_top").css("height",146*ratio+20+'px');
+				$("#navi").css('height',146*ratio);
+				$("#navi ul li a").css('font-size',2.7*ratio+"em");
+				$("#nav_up").css('font-size',2.5*ratio+"em");
+				$("#navi ul").css('margin-top',-0.9/(ratio*1.3)+"em");
+				$("#navi").css("background-size", "3200px "+(460*ratio)+"px");
+				$("#myspan").css('font-size',150*(ratio)+'%');
+				$("#myspan").css('top',1.6*ratio-1.1+'em');
 
-			if (win_width > 736){
-				// $("#nav_top ul li").css('margin','0 '+(4-3.7*ratio)+"em");
-				$("#avatar img").css("height",(250-100*ratio)+'px');
-				$("#nav_top").css("margin-bottom",(-2-2*ratio)+"em");
+				$("#header h1").css("font-size",2.5*ratio+'em')
+				$("#header h1").css('margin-top',0+"em");
 
-
-				$("#myspan").css('top',0.5-0.6*ratio+'em');
-				$("#myspan").css('font-size',150-50*ratio+'%');
-
-				// $("#navi").css('height',Math.round(win_width*0.113));
-				// $("#header").css('height',Math.round(win_width*0.47));
-
-				$("#navi").css('height',Math.round(146-63*ratio));
-				$("#header").css('height',Math.round(688-342*ratio));
-
-				$("#navi ul li a").css('font-size',2.5-0.8*ratio+"em");
-				$("#nav_up").css('font-size',2.5-0.8*ratio+"em");
-				$("#navi ul").css('margin-top',-0.9*ratio+"em");
-
-				$("#navi").css("background-size", "3200px "+(460-280*ratio)+"px");
-				// $("#navi").css("background-size", "3200px "++"px");
+				$("#header p").css("font-size",1.2*ratio+0.5+'em')
+				$("#header p").css('margin-top', -0.3*ratio-1+"em");
+				
 			}
-			else {
-				$("#nav_top").css("margin-bottom",(-2-2*ratio_min)+"em");
+			else if (win_width<=736){
+				$("#header").css('height',Math.round(688*ratio_min));
+				$("#avatar img").css("height",(250*ratio_min)+'px');
+				$("#avatar").css("background-size",(270*ratio_min)+'px');
+				$("#nav_top").css("height",146*ratio_min+20+'px');
+				$("#navi").css('height',146*ratio_min);
+				$("#navi ul li a").css('font-size',2.7*ratio_min+"em");
+				$("#nav_up").css('font-size',2.5*ratio_min+"em");
+				$("#navi ul").css('margin-top',-0.9/(ratio_min*1.3)+"em");
+				$("#navi").css("background-size", "3200px "+(460*ratio_min)+"px");
+				$("#myspan").css('font-size',150*(ratio_min)+'%');
+				$("#myspan").css('top',1.6*ratio_min-1.1+'em');
 
-				$("#avatar img").css("height",(250-100*ratio_min)+'px');
-				// $("#nav_top ul li").css('margin','0 '+(4-3.3*ratio_2)+"em");
+				$("#header h1").css("font-size",2.5*ratio_min+'em')
+				$("#header h1").css('margin-top',0+"em");
 
-				$("#myspan").css('top',(0.5-0.6*ratio_min)+'em');
-				$("#myspan").css('font-size',(150-50*ratio_min)+'%');
-
-				$("#navi").css('height',Math.round(146-63*ratio_min));
-				$("#header").css('height',Math.round(688-342*ratio_min));
-
-				$("#navi ul li a").css('font-size',2.5-0.8*(ratio_min)+"em");
-				$("#nav_up").css('font-size',2.5-0.8*ratio_min+"em");
-				$("#navi ul").css('margin-top',-0.9*ratio_min+"em");
-
-				// $("#navi").css("background-size", "3200px 180px");
+				$("#header p").css("font-size",1.2*ratio_min+0.5+'em')
+				$("#header p").css('margin-top', -0.3*ratio_min-1+"em");
 			}
-			// if (win_width<840){
-			// 	$("#navi").css("background-image", 'url("assets/css/images/navbar_mobile.svg")')
-			// }
-			// else if (win_width<1280){
-			// 	$("#navi").css("background-image", 'url("assets/css/images/navbar_mobile2.svg")')
-			// }
-			// else{
-			// 	$("#navi").css("background-image", 'url("assets/css/images/navbar.svg")');
-			// }
+			else if (win_width>=1280){
+				$("#header").css('height',Math.round(688));
+				$("#avatar img").css("height",(250)+'px');
+				$("#avatar").css("background-size",(270)+'px');
+				$("#nav_top").css("height",146+20+'px');
+				$("#navi").css('height',146);
+				$("#navi ul li a").css('font-size',2.7+"em");
+				$("#nav_up").css('font-size',2.5+"em");
+				$("#navi ul").css('margin-top',-0.9+"em");
+				$("#navi").css("background-size", "3200px "+(460)+"px");
+				$("#myspan").css('font-size',150+'%');
+				$("#myspan").css('top',0.5+'em');
+				
+				$("#header h1").css("font-size",2.5+'em')
+				$("#header h1").css('margin-top',0+"em");
+				$("#header p").css("font-size",1.7+'em')
+				$("#header p").css('margin-top', -1.3+"em");
+			}
+		
+			
 		}
 		
 
@@ -112,14 +113,9 @@
 		});
 
 		$(window).scroll(function() {
-			// var win_width = window.outerWidth;
-			// if (win_width > 736){
-			// 	$("#navi").css('height',Math.round(win_width*0.113));
-			// 	$("#header").css('height',Math.round(win_width*0.47));
-			// }
 			fit_navbar();
 			var header_height= parseInt($("#header").css('height'));
-			if ($(this).scrollTop() > Math.round(0.7*header_height)){ 
+			if ($(this).scrollTop() > Math.round(0.75*header_height)){ 
 				$('#navi').show(300);
 				$('#nav_up').show(300);
 			}
@@ -134,6 +130,9 @@
 			if ($.attr(this, 'href')=="#footer"){
 				if (window.outerWidth < 736){
 					var my_offset = parseInt($("#navi").css("height"))-164.5;
+				}
+				else if (window.outerWidth > 1280){
+					var my_offset = parseInt($("#navi").css("height"))-414.5;
 				}
 				else
 					var my_offset = parseInt($("#navi").css("height"))-207;
