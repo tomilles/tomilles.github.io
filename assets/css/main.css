@@ -119,12 +119,13 @@ input, select, textarea {
 		-ms-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
 		transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
 		border-bottom: dotted 1px;
-		color: #4eb980;
+		color: #6e6e6e;
 		text-decoration: none;
 	}
 
 		a:hover {
 			border-bottom-color: transparent;
+			color: #FFCC00
 		}
 
 	strong, b {
@@ -210,7 +211,7 @@ input, select, textarea {
 	}
 
 		.container.medium {
-			width: 50%;
+			width: 70%;
 		}
 
 		@media screen and (max-width: 1280px) {
@@ -220,7 +221,7 @@ input, select, textarea {
 			}
 
 				.container.medium {
-					width: 50%;
+					width:70%;
 				}
 
 		}
@@ -248,7 +249,7 @@ input, select, textarea {
 		@media screen and (max-width: 736px) {
 
 			.container {
-				width: 90% !important;
+				width: 80% !important;
 			}
 
 		}
@@ -2035,18 +2036,19 @@ input, select, textarea {
 			}
 
 			header.major.last {
-				border-bottom: 0;
-				margin-bottom: 0;
-				padding-bottom: 0;
+				/* border-bottom: 0; */
+				/* margin-bottom: 0; */
+				padding-bottom: 2em;
+				padding-top: 2em;
 			}
 
-				header.major.last:after {
+				/* header.major.last:after {
 					display: none;
-				}
+				} */
 
-				header.major.last h2 {
+				/* header.major.last h2 {
 					margin-bottom: 1em;
-				}
+				} */
 
 	footer {
 		text-align: center;
@@ -2460,20 +2462,39 @@ input, select, textarea {
 
 	ul.icons {
 		cursor: default;
+		padding:0;
+		margin: 0;
 	}
 
 		ul.icons li {
-			display: inline-block;
+			/* display: inline-block; */
+			/* display: flex; */
 			font-size: 1.25em;
 			line-height: 1em;
-			padding-left: 0.5em;
+			padding-bottom: 0.5em;
+			color:#ffffff;
+			font:  bolder, serif;
+			font-family: Courier New;
+			/* margin-left: 1em; */
+			/* width:100%; */
 		}
+		
 
-			ul.icons li:first-child {
-				padding-left: 0;
+			ul.icons li:last-child {
+				/* font-size: 1.25em; */
+				line-height: 1em;
+				padding-bottom: 0;
+			}
+			ul.icons li a{
+				/* -moz-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
+				-webkit-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
+				-ms-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
+				transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out; */
+				border-bottom: none;
+				text-decoration: none;
 			}
 
-			ul.icons li a, ul.icons li span {
+			ul.icons li div, ul.icons li span {
 				-moz-transition: background-color 0.2s ease-in-out;
 				-webkit-transition: background-color 0.2s ease-in-out;
 				-ms-transition: background-color 0.2s ease-in-out;
@@ -2485,11 +2506,12 @@ input, select, textarea {
 				line-height: 2em;
 				text-align: center;
 				width: 2em;
+				margin-right: 1em;
 			}
 
-				ul.icons li a:hover, ul.icons li span:hover {
+				/* ul.icons li a:hover, ul.icons li span:hover {
 					background: rgba(224, 224, 224, 0.15);
-				}
+				} */
 /* AVATAR */
 .myname{
 	line-height: 1.3em;
@@ -3287,6 +3309,7 @@ input, select, textarea {
 		padding: calc(460px + 6em) 0 10em 0;
 		position: relative;
 		text-align: center;
+		
 	}
 
 		#footer:before {
