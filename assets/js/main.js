@@ -33,7 +33,11 @@
 
 			var ratio_min = 736/1280;
 
-			// $("#footer").css('height',win_height+500+"px");
+			var navi_height = parseInt($("#navi").css('height'));
+			console.log(navi_height,win_height);
+
+			// $("#footer").css('height',+"px");
+			
 			$("#nav_top ul li").css('margin','0 '+3.8*ratio+'em');
 			
 
@@ -60,6 +64,7 @@
 				$("#header p").css('margin-top', -0.3*ratio-1+"em");
 
 				$("ul.icons li").css("font-size",1.25+"em");
+				$("#footer").css('height',Math.max((win_height+205-navi_height),600)+"px");
 				
 			}
 			else if (win_width<=736){
@@ -84,6 +89,8 @@
 				$("#header p").css('margin-top', -0.3*ratio_min-1+"em");
 
 				$("ul.icons li").css("font-size",0.75+"em");
+				$("#footer").css('height',Math.max((win_height+80),420)+"px");
+
 			}
 			else if (win_width>=1280){
 				$("#home div.single_column").addClass("columns").removeClass('single_column');
@@ -107,7 +114,12 @@
 				$("#header p").css('margin-top', -1.3+"em");
 				$("ul.icons li").css("font-size",1.25+"em");
 					
-				
+				if (win_width==1280){
+					$("#footer").css('height',Math.max((win_height+205-navi_height),600)+"px");
+				}
+				else{
+					$("#footer").css('height',Math.max((win_height+265),900)+"px");
+				}
 			}
 		
 			
