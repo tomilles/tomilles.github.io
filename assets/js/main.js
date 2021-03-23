@@ -115,7 +115,7 @@
 				$("ul.icons li").css("font-size",1.25+"em");
 					
 				if (win_width==1280){
-					$("#footer").css('height',Math.max((win_height+94-navi_height),600)+"px");
+					$("#footer").css('height',Math.max((win_height+205-navi_height),600)+"px");
 				}
 				else{
 					$("#footer").css('height',Math.max((win_height+265),900)+"px");
