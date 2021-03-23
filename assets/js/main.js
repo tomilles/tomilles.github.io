@@ -24,8 +24,8 @@
 		function fit_navbar() {
 
 			
-			var win_width = window.outerWidth;
-			var win_height = window.outerHeight;
+			var win_width = window.innerWidth;
+			var win_height = window.innerHeight;
 
 
 
@@ -34,7 +34,7 @@
 			var ratio_min = 736/1280;
 
 			var navi_height = parseInt($("#navi").css('height'));
-			console.log(navi_height,win_height);
+			console.log(win_width,win_height);
 
 			// $("#footer").css('height',+"px");
 			
@@ -115,7 +115,7 @@
 				$("ul.icons li").css("font-size",1.25+"em");
 					
 				if (win_width==1280){
-					$("#footer").css('height',Math.max((win_height+205-navi_height),600)+"px");
+					$("#footer").css('height',Math.max((win_height+94-navi_height),600)+"px");
 				}
 				else{
 					$("#footer").css('height',Math.max((win_height+265),900)+"px");

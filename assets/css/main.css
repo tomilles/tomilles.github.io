@@ -3560,7 +3560,7 @@ input, select, textarea {
 				background-size: 1600px 230px;
 				margin-top: -100px;
 				padding: calc(230px + 4em) 0 6em 0;
-				height: 65rem;
+				/* height: 65rem; */
 			}
 
 				#footer:before {
