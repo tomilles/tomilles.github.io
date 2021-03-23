@@ -89,7 +89,7 @@
 				$("#header p").css('margin-top', -0.3*ratio_min-1+"em");
 
 				$("ul.icons li").css("font-size",0.75+"em");
-				$("#footer").css('height',Math.max((win_height+80),420)+"px");
+				$("#footer").css('height',Math.max((win_height+81),420)+"px");
 
 			}
 			else if (win_width>=1280){
