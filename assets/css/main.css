@@ -1,6 +1,16 @@
 @import url("fontawesome-all.min.css");
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,400italic,600,600italic,700,700italic");
-
+@font-face {
+	font-family: 'icomoon';
+	src:  url('fonts/icomoon.eot?jlpkaf');
+	src:  url('fonts/icomoon.eot?jlpkaf#iefix') format('embedded-opentype'),
+	  url('fonts/icomoon.ttf?jlpkaf') format('truetype'),
+	  url('fonts/icomoon.woff?jlpkaf') format('woff'),
+	  url('fonts/icomoon.svg?jlpkaf#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	font-display: block;
+  }
 /*
 	Directive by HTML5 UP
 	html5up.net | @ajlkn
@@ -2300,7 +2310,46 @@ input, select, textarea {
 	}
 
 /* Icon */
+.icon-resume:before {
+	content: "\e900";
+	color: rgb(255, 255, 255);
+  }
+  .icon-envelope:before {
+	content: "\e901";
+	color: rgb(255, 255, 255);
+  }
+  .icon-folder:before {
+	content: "\e902";
+	color: rgb(255, 255, 255);
+  }
+  .icon-user:before {
+	content: "\e903";
+	color: rgb(255, 255, 255);
+  }
 
+	.CV {
+		font-family: 'icomoon';
+		/* speak: never; */
+		font-style: normal;
+		font-weight: normal;
+		font-variant: normal;
+		text-transform: none;
+		line-height: 1;
+		/* text-rendering: auto; */
+	  
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		text-decoration: none;
+		border-bottom: none;
+		position: relative;
+	  }
+	.CV span{
+		/* color: #6e6e6e; */
+		font-family: 'Source Sans Pro', sans-serif;
+		font-size: 16pt;
+		font-weight: 600;
+		line-height: 1.75em;
+	}
 	.icon {
 		text-decoration: none;
 		border-bottom: none;
@@ -2665,6 +2714,7 @@ input, select, textarea {
 		
 
 		#navi ul li a span {
+			/* z-index: 5; */
 			display: block;
 			position: absolute;
 			background: #222222;
@@ -2738,7 +2788,7 @@ input, select, textarea {
 				padding: 0;
 				vertical-align: middle;
 			}
-				#nav_top ul li a {
+				#nav_top ul li a, #nav_top ul li a img {
 					
 					position: relative;
 					display: inline-block;
