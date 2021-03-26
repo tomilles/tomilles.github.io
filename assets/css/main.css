@@ -3408,16 +3408,17 @@ input, select, textarea {
 			-ms-transition: color 0s ease-in-out, border-bottom-color 0s ease-in-out;
 			transition: color 0s ease-in-out, border-bottom-color 0s ease-in-out;
 		}
-		#footer a:hover{
-			color:rgb(255, 255, 255);
+		@media (hover: hover){
+			#footer a:hover{
+				color:rgb(255, 255, 255);
+			}
+			#footer a:hover .contact_footer{
+				text-shadow: 0.5px 0px 0px #ffffff;	
+			}
+			#footer a:hover div.icon{
+				border: solid 1px rgba(255, 255, 255, 1);
+			}
 		}
-		#footer a:hover .contact_footer{
-			text-shadow: 0.5px 0px 0px #ffffff;	
-		}
-		#footer a:hover div.icon{
-			border: solid 1px rgba(255, 255, 255, 1);
-		}
-		
 		#footer .contact_footer{
 			border: none;
 			position:unset;
