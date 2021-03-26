@@ -2328,6 +2328,7 @@ input, select, textarea {
   }
 
 	.CV {
+		z-index: 100;
 		font-family: 'icomoon';
 		/* speak: never; */
 		font-style: normal;
@@ -2344,6 +2345,7 @@ input, select, textarea {
 		position: relative;
 	  }
 	.CV span{
+		z-index: -100;
 		/* color: #6e6e6e; */
 		font-family: 'Source Sans Pro', sans-serif;
 		font-size: 16pt;
@@ -2690,7 +2692,7 @@ input, select, textarea {
 				vertical-align: middle;
 			}
 				#navi ul li a {
-					
+					z-index: 100;
 					position: relative;
 					display: inline-block;
 					color: #ffffff;
@@ -2714,13 +2716,13 @@ input, select, textarea {
 		
 
 		#navi ul li a span {
-			/* z-index: 5; */
+			z-index: -100;
 			display: block;
 			position: absolute;
 			background: #222222;
 			color: #ffffff;
 			top: -2.5em;
-			font-size: 0.3em;
+			font-size: 0.25em;
 			height: 2em;
 			line-height: 2em;
 			left: 50%;
@@ -2729,8 +2731,11 @@ input, select, textarea {
 			-webkit-transition: opacity .25s ease-in-out;
 			-ms-transition: opacity .25s ease-in-out;
 			transition: opacity .25s ease-in-out;
-			width: 5.5em;
+			width: 5.7em;
 			margin-left: -2.75em;
+		}
+		#navi ul li a span div{
+			font-size: 1.1em;
 		}
 
 			#navi ul li a span:after {
