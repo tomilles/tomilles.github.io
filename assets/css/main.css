@@ -3001,7 +3001,7 @@ input, select, textarea {
 		}
 
 		.iconimage{
-			border-top: solid 1px rgba(224, 224, 224, 0.75);
+			/* border-bottom: solid 1px rgba(224, 224, 224, 0.75); */
 			text-align: center;
 			padding-top: 12px;
 		}
