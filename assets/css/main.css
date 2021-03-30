@@ -3064,11 +3064,11 @@ input, select, textarea {
 				padding-left: 0.5em;
 				content: "•";
 			}
-		#softskill_list ul li:after {
+		/* #softskill_list ul li:after {
 		
 			padding-right: 0.5em;
 			padding-left: 0.5em;
-			content: " ";
+			content: " "; */
 		}
 		
 		#freetime_list ul li:nth-child(n+2):before {
