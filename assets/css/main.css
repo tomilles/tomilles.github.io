@@ -2943,6 +2943,10 @@ input, select, textarea {
 			width: 80%;
 			left: 10%;
 		}
+		#softskill_list ul.in_column::before{
+			width: 96%;
+			left: 2%;
+		}
 		.column.border_left{
 			border-left: solid 1px rgba(224, 224, 224, 0.75);
 		}
