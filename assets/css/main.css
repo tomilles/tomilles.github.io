@@ -3062,6 +3062,7 @@ input, select, textarea {
 			
 				padding-right: 0.5em;
 				padding-left: 0.5em;
+				margin-left: -1.3em;
 				content: "•";
 			}
 		/* #softskill_list ul li:after {
