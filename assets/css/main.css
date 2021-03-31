@@ -3050,12 +3050,6 @@ input, select, textarea {
 		}
 		#softskill_list ul li{
 			display: block;
-			/* flex-basis: 0; */
-			/* -webkit-box-flex: 1; */
-			/* flex-grow: 1; */
-			/* flex-shrink: 1; */
-			/* padding: 0.75rem; */
-			/* text-align: center */
 		}
 
 		#softskill_list ul li:before {
@@ -3069,8 +3063,8 @@ input, select, textarea {
 		
 			padding-right: 0.5em;
 			padding-left: 0.5em;
-			content: " "; */
-		}
+			content: " ";
+		} */
 		
 		#freetime_list ul li:nth-child(n+2):before {
 			padding-right: 0.5em;
