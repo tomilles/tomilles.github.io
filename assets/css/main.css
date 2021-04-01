@@ -2,11 +2,11 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,400italic,600,600italic,700,700italic");
 @font-face {
 	font-family: 'icomoon';
-	src:  url('fonts/icomoon.eot?jlpkaf');
-	src:  url('fonts/icomoon.eot?jlpkaf#iefix') format('embedded-opentype'),
-	  url('fonts/icomoon.ttf?jlpkaf') format('truetype'),
-	  url('fonts/icomoon.woff?jlpkaf') format('woff'),
-	  url('fonts/icomoon.svg?jlpkaf#icomoon') format('svg');
+	src:  url('fonts/icomoon.eot?b1svxh');
+	src:  url('fonts/icomoon.eot?b1svxh#iefix') format('embedded-opentype'),
+	  url('fonts/icomoon.ttf?b1svxh') format('truetype'),
+	  url('fonts/icomoon.woff?b1svxh') format('woff'),
+	  url('fonts/icomoon.svg?b1svxh#icomoon') format('svg');
 	font-weight: normal;
 	font-style: normal;
 	font-display: block;
@@ -2241,16 +2241,17 @@ input, select, textarea {
 	}
 
 		.image:after {
-			-moz-transition: opacity 0.25s ease-in-out;
-			-webkit-transition: opacity 0.25s ease-in-out;
-			-ms-transition: opacity 0.25s ease-in-out;
-			transition: opacity 0.25s ease-in-out;
+			-moz-transition: opacity 0.4s ease-in-out;
+			-webkit-transition: opacity 0.4s ease-in-out;
+			-ms-transition: opacity 0.4s ease-in-out;
+			transition: opacity 0.4s ease-in-out;
 			background-image: url("images/overlay.png");
+			/* background-color: #FFCC00; */
 			content: '';
 			display: block;
 			height: 100%;
 			left: 0;
-			opacity: 0.2;
+			opacity: 0.5;
 			position: absolute;
 			top: 0;
 			width: 100%;
@@ -2287,10 +2288,10 @@ input, select, textarea {
 		}
 
 			.image.icon:before {
-				-moz-transition: -moz-transform 0.1s ease-in-out, font-size 0.1s ease-in-out;
-				-webkit-transition: -webkit-transform 0.1s ease-in-out, font-size 0.1s ease-in-out;
-				-ms-transition: -ms-transform 0.1s ease-in-out, font-size 0.1s ease-in-out;
-				transition: transform 0.1s ease-in-out, font-size 0.1s ease-in-out;
+				-moz-transition: -moz-transform 0.3s ease-in-out, font-size 0.3s ease-in-out;
+				-webkit-transition: -webkit-transform 0.3s ease-in-out, font-size 0.3s ease-in-out;
+				-ms-transition: -ms-transform 0.3s ease-in-out, font-size 0.3s ease-in-out;
+				transition: transform 0.3s ease-in-out, font-size 0.3s ease-in-out;
 				color: #fff;
 				font-size: 6em;
 				height: 1em;
@@ -2302,18 +2303,25 @@ input, select, textarea {
 				top: 50%;
 				width: 1em;
 				z-index: 1;
+				opacity: 1;
 			}
 
 			.image.icon:hover:before {
-				-moz-transform: translateZ(1em);
-				-webkit-transform: translateZ(1em);
-				-ms-transform: translateZ(1em);
-				transform: translateZ(1em);
+				-moz-transform: translateZ(5em);
+				-webkit-transform: translateZ(5em);
+				-ms-transform: translateZ(5em);
+				transform: translateZ(5em);
+				
 			}
 
 			.image.icon:hover:after {
-				opacity: 1;
+				opacity: 0;
 			}
+			.image.icon:hover .blur{
+				filter: blur(0px);
+				-webkit-filter: blur(0px);
+			}
+			
 
 	span.image.icon {
 		cursor: default;
@@ -2325,8 +2333,29 @@ input, select, textarea {
 	color: rgb(255, 255, 255);
 	font-size: 95%;
   }
+.icon-sound-waves:before {
+  content: "\e901";
+  color: rgb(255, 255, 255);
+  /* font-size: 200%; */
+}
+.project_logo{
+	z-index: 1000;
+	font-family: 'icomoon' !important;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	font-size: 200%;
+	
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-decoration: none;
+	border-bottom: none;
+	position: relative;
+}
+.project_image{
 
-
+}
 	.CV {
 		z-index: 100;
 		font-family: 'icomoon';
@@ -2340,6 +2369,7 @@ input, select, textarea {
 		text-decoration: none;
 		border-bottom: none;
 		position: relative;
+		
 	  }
 	.CV span{
 		z-index: -100;
@@ -2364,8 +2394,11 @@ input, select, textarea {
 			text-rendering: auto;
 			line-height: 1;
 			text-transform: none !important;
-			font-family: 'Font Awesome 5 Free';
+			/* font-family: 'Font Awesome 5 Free'; */
 			font-weight: 400;
+		}
+		.icon.nav_icon:before{
+			font-family: 'Font Awesome 5 Free';
 		}
 
 		.icon > .label {
@@ -3233,14 +3266,22 @@ input, select, textarea {
 		}
 
 		.feature .image {
+			object-fit:cover;
 			display: inline-block;
 			height: 100%;
 			overflow: hidden;
 			position: relative;
 			width: 50%;
 		}
+		.blur {
+			filter: blur(1px);
+			-webkit-filter: blur(1px);
+			/* opacity: 0.5; */
+		}
+
 
 			.feature .image img {
+				/* object-fit: cover; */
 				display: block;
 				min-height: 100%;
 				min-width: 100%;
@@ -3814,7 +3855,7 @@ input, select, textarea {
 
 				.feature .image {
 					float: none;
-					height: 15em;
+					height: 10em;
 					width: 100%;
 				}
 
