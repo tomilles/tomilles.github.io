@@ -88,7 +88,7 @@
 				$("#header p").css("font-size",1.2*ratio_min+0.5+'em')
 				$("#header p").css('margin-top', -0.3*ratio_min-1+"em");
 
-				$("ul.icons li").css("font-size",0.75+"em");
+				$("ul.icons li").css("font-size",Math.max((2*ratio),0.75)+"em");
 				$("#footer").css('height',Math.max((win_height+81),420)+"px");
 
 			}

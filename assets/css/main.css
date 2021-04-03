@@ -2579,6 +2579,7 @@ input, select, textarea {
 			/* display: inline-block; */
 			/* display: flex; */
 			font-size: 1.25em;
+			/* font-size:75%; */
 			line-height: 1em;
 			padding-bottom: 0.5em;
 			color:#ffffff;
