@@ -3856,7 +3856,7 @@ input, select, textarea {
 
 				.feature .image {
 					float: none;
-					height: 10em;
+					height: 9em;
 					width: 100%;
 				}
 
@@ -3964,7 +3964,11 @@ input, select, textarea {
 				.feature .content {
 					padding: 2em 1em !important;
 				}
-
+				.feature .image {
+					float: none;
+					height: 6em;
+					width: 100%;
+				}
 		/* Main */
 
 			#main {
