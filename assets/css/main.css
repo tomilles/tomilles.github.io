@@ -2288,10 +2288,11 @@ input, select, textarea {
 		}
 
 			.image.icon:before {
-				-moz-transition: -moz-transform 0.3s ease-in-out, font-size 0.3s ease-in-out;
-				-webkit-transition: -webkit-transform 0.3s ease-in-out, font-size 0.3s ease-in-out;
-				-ms-transition: -ms-transform 0.3s ease-in-out, font-size 0.3s ease-in-out;
-				transition: transform 0.3s ease-in-out, font-size 0.3s ease-in-out;
+				-moz-transition: -moz-transform 0.3s ease-in-out, font-size 0.3s ease-in-out, opacity .2s ease-in-out;;
+				-webkit-transition: -webkit-transform 0.3s ease-in-out, font-size 0.3s ease-in-out, opacity .2s ease-in-out;;
+				-ms-transition: -ms-transform 0.3s ease-in-out, font-size 0.3s ease-in-out, opacity .2s ease-in-out;;
+				transition: transform 0.3s ease-in-out, font-size 0.3s ease-in-out, opacity .2s ease-in-out;;
+		
 				color: #fff;
 				font-size: 6em;
 				height: 1em;
@@ -2307,10 +2308,11 @@ input, select, textarea {
 			}
 
 			.image.icon:hover:before {
-				-moz-transform: translateZ(5em);
-				-webkit-transform: translateZ(5em);
-				-ms-transform: translateZ(5em);
-				transform: translateZ(5em);
+				-moz-transform: translateZ(2em);
+				-webkit-transform: translateZ(2em);
+				-ms-transform: translateZ(2em);
+				transform: translateZ(2em);
+				opacity: 0;
 				
 			}
 
@@ -2353,9 +2355,7 @@ input, select, textarea {
 	border-bottom: none;
 	position: relative;
 }
-.project_image{
 
-}
 	.CV {
 		z-index: 100;
 		font-family: 'icomoon';
