@@ -2953,6 +2953,18 @@ input, select, textarea {
 		}
 
 /* SKILLS SECTION */
+		.line::before {
+			background: #5b5b5b7c;
+			content: '';
+			display: block;
+			height: 1px;
+			margin-bottom: 1em;
+			left: 0;
+			position: relative;
+			width: 60%;
+			left: 20%;
+		}
+
 		.column {
 			display: block;
 			flex-basis: 0;
