@@ -255,6 +255,7 @@ input, select, textarea {
 	.horizontal{
 		padding-top: 5px;
 	}
+
 	.bg-latindance{ 
 		margin-right: 0.5em;
 		background-image: url("images/latindance2.jpg");
@@ -3031,6 +3032,7 @@ input, select, textarea {
 		#softskill_list .column{
 			padding-bottom: 0px;
 		}
+		
 		.column_2 {
 			
 			/* max-width: 30%; */
@@ -3085,6 +3087,8 @@ input, select, textarea {
 			border-top: solid 1px rgba(224, 224, 224, 0.75);	
 		}
 		.columns-bg{
+			padding-left: 3%;
+			padding-right: 3%;
 			display: -webkit-box;
 			display: flex;
 		}
@@ -3173,6 +3177,9 @@ input, select, textarea {
 		}
 		#softskill_list ul,#freetime_list ul{
 			width: 90%;
+		}
+		#softskill_list ul.nulpad{
+			padding-bottom: 0;
 		}
 		#freetime_list ul li{
 			display: inline-flex;
