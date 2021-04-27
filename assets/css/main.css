@@ -230,6 +230,7 @@ input, select, textarea {
 
 
 	.bg-latinsoda{ 
+		
 		margin-right: 0.5em;
 		background-image: url("images/latinsoda1.jpg");
 		border-radius: 6px;
@@ -250,6 +251,9 @@ input, select, textarea {
 		background-position-y:30%;
 		background-position-x: center;
 		/* height:20em; */
+	}
+	.horizontal{
+		padding-top: 5px;
 	}
 	.bg-latindance{ 
 		margin-right: 0.5em;
@@ -3023,6 +3027,9 @@ input, select, textarea {
 			padding: 0.75rem;
 			
 			text-align: center
+		}
+		#softskill_list .column{
+			padding-bottom: 0px;
 		}
 		.column_2 {
 			
