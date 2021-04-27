@@ -230,7 +230,7 @@ input, select, textarea {
 
 
 	.bg-latinsoda{ 
-		
+		margin-left: 0.5em;
 		margin-right: 0.5em;
 		background-image: url("images/latinsoda1.jpg");
 		border-radius: 6px;
@@ -243,6 +243,7 @@ input, select, textarea {
 	}
 	.bg-latinsoda2{ 
 		margin-left: 0.5em;
+		margin-right: 0.5em;
 		background-image: url("images/latinsoda2.jpg");
 		border-radius: 6px;
 		background-size:cover;
@@ -252,11 +253,10 @@ input, select, textarea {
 		background-position-x: center;
 		/* height:20em; */
 	}
-	.horizontal{
-		padding-top: 5px;
-	}
+	
 
 	.bg-latindance{ 
+		margin-left: 0.5em;
 		margin-right: 0.5em;
 		background-image: url("images/latindance2.jpg");
 		border-radius: 6px;
@@ -267,6 +267,7 @@ input, select, textarea {
 		background-position-x: center;
 	}
 	.bg-latindance2{ 
+		margin-right: 0.5em;
 		margin-left: 0.5em;
 		background-image: url("images/latindance1.jpg");
 		border-radius: 6px;
@@ -2700,8 +2701,7 @@ input, select, textarea {
 }
 
 .skill_icon{
-	/* position: absolute; */
-	/* horizontal */
+	
 	display: block;
 	font-size: 50px;
 	/* line-height: 1em; */
@@ -3044,7 +3044,10 @@ input, select, textarea {
 			padding: 0.75rem;
 			text-align: center
 		}
-		
+		.horizontal{
+			padding-left: 2%;
+			padding-right: 2%;
+		}
 		.column-bg {
 			display: block;
 			flex-basis: 0;
@@ -3087,8 +3090,8 @@ input, select, textarea {
 			border-top: solid 1px rgba(224, 224, 224, 0.75);	
 		}
 		.columns-bg{
-			padding-left: 3%;
-			padding-right: 3%;
+			padding-left: 2%;
+			padding-right: 2%;
 			display: -webkit-box;
 			display: flex;
 		}
