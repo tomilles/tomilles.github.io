@@ -66,6 +66,11 @@
 				$("ul.icons li").css("font-size",1.25+"em");
 				$("#footer").css('height',Math.max((win_height+205-navi_height),600)+"px");
 				
+				$("#softskill_list ul div.horizontal").addClass("columns-bg").removeClass("horizontal")
+				$("#softskill_list ul div.removed_soda").addClass("column bg-latinsoda2").removeClass("removed_soda")
+				$("#softskill_list ul div.bg-latinsoda").addClass("column").removeClass("column-bg")
+				$("#softskill_list ul div.removed_dance").addClass("column bg-latindance2").removeClass("removed_dance")
+				$("#softskill_list ul div.bg-latindance").addClass("column").removeClass("column-bg")
 			}
 			else if (win_width<=736){
 				$("#home div.columns").addClass("single_column").removeClass('columns');
@@ -91,6 +96,11 @@
 				$("ul.icons li").css("font-size",Math.max((2*ratio),0.75)+"em");
 				$("#footer").css('height',Math.max((win_height+81),420)+"px");
 
+				$("#softskill_list ul div.columns-bg").addClass("horizontal").removeClass("columns-bg")
+				$("#softskill_list ul div.bg-latinsoda2").addClass("removed_soda").removeClass("column bg-latinsoda2")
+				$("#softskill_list ul div.bg-latinsoda").addClass("column-bg").removeClass("column")
+				$("#softskill_list ul div.bg-latindance2").addClass("removed_dance").removeClass("column bg-latindance2")
+				$("#softskill_list ul div.bg-latindance").addClass("column-bg").removeClass("column")
 			}
 			else if (win_width>=1280){
 				$("#home div.single_column").addClass("columns").removeClass('single_column');
@@ -113,6 +123,12 @@
 				$("#header p").css("font-size",1.7+'em')
 				$("#header p").css('margin-top', -1.3+"em");
 				$("ul.icons li").css("font-size",1.25+"em");
+
+				$("#softskill_list ul div.horizontal").addClass("columns-bg").removeClass("horizontal")
+				$("#softskill_list ul div.removed_soda").addClass("column bg-latinsoda2").removeClass("removed_soda")
+				$("#softskill_list ul div.bg-latinsoda").addClass("column").removeClass("column-bg")
+				$("#softskill_list ul div.removed_dance").addClass("column bg-latindance2").removeClass("removed_dance")
+				$("#softskill_list ul div.bg-latindance").addClass("column").removeClass("column-bg")
 					
 				if (win_width==1280){
 					$("#footer").css('height',Math.max((win_height+205-navi_height),600)+"px");
