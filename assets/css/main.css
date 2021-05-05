@@ -3017,7 +3017,10 @@ input, select, textarea {
 			left: 20%;
 		}
 
-
+		/* #extracurricular {
+			padding-left: 0.5em;
+			padding-right: 0.5em;
+		} */
 		.category_familiar{
 			
 			visibility:visible;
@@ -3068,7 +3071,7 @@ input, select, textarea {
 			margin-top:5px;
 		}
 		.proficient{
-			background-color: whitesmoke;
+			background-color: rgb(243, 243, 243);
 		}
 		.familiar{
 			background-color:rgb(250, 250, 250);
@@ -3086,7 +3089,10 @@ input, select, textarea {
 			border-radius: 0px 0px 15px 15px;
 			background-color:rgb(250, 250, 250);
 		}
-
+		.sidepad{
+			padding-left: 0.75em;
+			padding-right: 0.75em;
+		}
 		#botpad{
 			padding-bottom: 1rem;
 		}
@@ -3105,7 +3111,7 @@ input, select, textarea {
 			padding-bottom: 0px;
 		}
 		
-		
+
 
 		.column_2 {
 			
@@ -3189,7 +3195,7 @@ input, select, textarea {
 			margin-top: 64px;
 		}
 		#skills{
-			border-radius: 15px 15px 15px 0px;
+			border-radius: 15px 15px 15px 15px;
 		}
 
 		

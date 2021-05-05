@@ -42,7 +42,7 @@
 			
 
 			if (736 < win_width && win_width < 1280){
-				// $("#skills").css("border-radius","15px 15px 15px 0px");
+				$("#skills").css("border-radius","15px 15px 15px 0px");
 				$(".hide_when_small").css("visibility","visible");
 				$(".hide_when_small").css("height","auto");
 				$(".hide_when_small").css("width","auto");
@@ -79,7 +79,7 @@
 				$("#softskill_list  div.bg-latindance").addClass("column_2").removeClass("column-bg")
 			}
 			else if (win_width<=736){
-				// $("#skills").css("border-radius","15px");
+				$("#skills").css("border-radius","15px 15px 15px 15px");
 				$(".hide_when_small").css("visibility","hidden");
 				$(".hide_when_small").css("height","0px");
 				$(".hide_when_small").css("width","0px");
@@ -116,7 +116,7 @@
 				$("#softskill_list  div.bg-latindance").addClass("column-bg").removeClass("column_2")
 			}
 			else if (win_width>=1280){
-				// $("#skills").css("border-radius","15px 15px 15px 0px");
+				$("#skills").css("border-radius","15px 15px 15px 0px");
 				$(".hide_when_small").css("visibility","visible");
 				$(".hide_when_small").css("height","auto");
 				$(".hide_when_small").css("width","auto");
