@@ -3019,9 +3019,75 @@ input, select, textarea {
 			left: 20%;
 		}
 
-		
 
+		.category_familiar{
+			
+			visibility:visible;
+			padding: 0% !important;
+			margin: -1px;
+			border: solid 1px rgba(224, 224, 224, 0.75);
+			writing-mode:vertical-rl;
+			transform: rotate(-180deg);
+			border-bottom-right-radius: 10px;
+			border-top-right-radius: 10px;
+			max-width: 4%;
+			margin-left:-4%;
+			background-color:rgb(250, 250, 250);
+			text-align:center !important;
+			
+			padding-right: 0.5% !important;
 
+		}
+		.category_proficient{
+			visibility:visible;
+			padding: 0% !important;
+			margin: -1px;
+			border: solid 1px rgba(224, 224, 224, 0.75);
+			writing-mode:vertical-rl;
+			transform: rotate(-180deg);
+			border-bottom-right-radius: 10px;
+			border-top-right-radius: 10px;
+			max-width: 4%;
+			margin-left:-4%;
+			background-color:rgb(243, 243, 243);
+			text-align:center !important;
+			
+				padding-right: 0.5% !important;
+			/* bottom: 50px; */
+		}
+
+		#skills .hide_when_small h5{
+			position:relative;
+			font-size: 90%;
+			text-align: center;
+			/* margin: 0%; */
+			letter-spacing: 4px;
+		}
+		#skills .hide_when_big h5{
+			position:relative;
+			text-align: center;
+			letter-spacing: 2px;
+			margin-top:5px;
+		}
+		.proficient{
+			background-color: whitesmoke;
+		}
+		.familiar{
+			background-color:rgb(250, 250, 250);
+		}
+		.familiar_bottomrightcorner{
+			border-radius: 0px 0px 15px 0px;
+			background-color:rgb(250, 250, 250);
+		}
+
+		.familiar_rectangle{
+			border-radius: 0px;
+			background-color:rgb(250, 250, 250);
+		}
+		.familiar_rounded{
+			border-radius: 0px 0px 15px 15px;
+			background-color:rgb(250, 250, 250);
+		}
 
 		.column {
 			display: block;
@@ -3117,6 +3183,9 @@ input, select, textarea {
 			/* margin-left: 5%;
 			margin-right: 5%; */
 			margin-top: 64px;
+		}
+		#skills{
+			border-radius: 15px 15px 15px 0px;
 		}
 
 		

@@ -42,7 +42,13 @@
 			
 
 			if (736 < win_width && win_width < 1280){
-
+				// $("#skills").css("border-radius","15px 15px 15px 0px");
+				$(".hide_when_small").css("visibility","visible");
+				$(".hide_when_small").css("height","auto");
+				$(".hide_when_small").css("width","auto");
+				$(".hide_when_big").css("visibility","hidden");
+				$(".hide_when_big").css("height","0px");
+				$(".hide_when_big").css("width","0px");
 				$("#home div.single_column").addClass("columns").removeClass('single_column');
 				$("#home div.border_top").addClass("border_left").removeClass('border_top');
 				$("#header").css('height',Math.round(688*ratio));
@@ -73,6 +79,13 @@
 				$("#softskill_list  div.bg-latindance").addClass("column_2").removeClass("column-bg")
 			}
 			else if (win_width<=736){
+				// $("#skills").css("border-radius","15px");
+				$(".hide_when_small").css("visibility","hidden");
+				$(".hide_when_small").css("height","0px");
+				$(".hide_when_small").css("width","0px");
+				$(".hide_when_big").css("visibility","visible");
+				$(".hide_when_big").css("height","auto");
+				$(".hide_when_big").css("width","auto");
 				$("#home div.columns").addClass("single_column").removeClass('columns');
 				$("#home div.border_left").addClass("border_top").removeClass('border_left');
 				$("#header").css('height',Math.round(688*ratio_min));
@@ -103,6 +116,13 @@
 				$("#softskill_list  div.bg-latindance").addClass("column-bg").removeClass("column_2")
 			}
 			else if (win_width>=1280){
+				// $("#skills").css("border-radius","15px 15px 15px 0px");
+				$(".hide_when_small").css("visibility","visible");
+				$(".hide_when_small").css("height","auto");
+				$(".hide_when_small").css("width","auto");
+				$(".hide_when_big").css("visibility","hidden");
+				$(".hide_when_big").css("height","0px");
+				$(".hide_when_big").css("width","0px");
 				$("#home div.single_column").addClass("columns").removeClass('single_column');
 				$("#home div.border_top").addClass("border_left").removeClass('border_top');
 
