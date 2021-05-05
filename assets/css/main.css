@@ -2487,9 +2487,7 @@ input, select, textarea {
   		margin: 0 auto;
 		padding-bottom: 0.5em;
 	}
-	ul.bot_pad{
-		padding-bottom: 1em;
-	}
+	
 
 		ul.default li {
 			text-align: center;
@@ -3089,13 +3087,17 @@ input, select, textarea {
 			background-color:rgb(250, 250, 250);
 		}
 
+		#botpad{
+			padding-bottom: 1rem;
+		}
 		.column {
 			display: block;
 			flex-basis: 0;
 			-webkit-box-flex: 1;
 			flex-grow: 1;
 			flex-shrink: 1;
-			padding: 0.75rem;
+			padding: 0.5rem;
+			/* padding-bottom: 1em; */
 			
 			text-align: center
 		}
@@ -3103,6 +3105,8 @@ input, select, textarea {
 			padding-bottom: 0px;
 		}
 		
+		
+
 		.column_2 {
 			
 			/* max-width: 30%; */
