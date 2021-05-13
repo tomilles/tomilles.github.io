@@ -3281,6 +3281,9 @@ input, select, textarea {
 				margin-left: -1.3em;
 				content: "•";
 			}
+		.courses li a{
+			margin-left: 0.5em;
+		}
 		/* #softskill_list ul li:after {
 		
 			padding-right: 0.5em;
