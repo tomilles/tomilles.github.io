@@ -1,0 +1,709 @@
+<!DOCTYPE HTML>
+<!--
+	Directive by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+
+	<title>Tomi Illes</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="icon" href="images/avatar_new_favicon.png">
+</head>
+
+<body class="is-preload">
+
+	<!-- Wrapper-->
+	<div id="wrapper">
+
+		<!-- Header -->
+
+
+
+		<!-- Main -->
+		<div id="main" class="projects">
+			<script>
+				function goBack() {
+					window.location.href = "index.html#work";
+					// $("#go_to_work").click();
+					// $('html, body').animate({scrollTop: $("#work").offset().top - 200}, 400);
+				}
+			</script>
+			<script>
+				function changecolor(item) {
+					item.style.color = "#FFCC00";
+					setTimeout(function () {
+						item.style.color = "#6e6e6e";
+					}, 1800);
+				}
+			</script>
+			<script>
+				function addborder(item) {
+					let userAgentString = navigator.userAgent;
+					let chromeAgent = userAgentString.indexOf("Chrome") > -1;
+					let safariAgent = userAgentString.indexOf("Safari") > -1;
+					if ((chromeAgent) && (safariAgent)) safariAgent = false;
+					console.log(safariAgent);
+					if (safariAgent == true) {
+						item.style.border = "3px solid #FFCC00";
+						item.style.borderRadius = "10px";
+					} else {
+						item.style.border = "2px solid #FFCC00";
+						item.style.borderRadius = "25px";
+					}
+
+				}
+			</script>
+			<script>
+				function removeborder(item) {
+					item.style.border = "2px solid #ffcc0000"
+				}
+			</script>
+			<script>
+				function playpause(item) {
+					if (item.paused) {
+						item.play();
+					} else {
+						item.pause();
+					}
+				}
+			</script>
+			<a href="#" onclick="goBack()" class="clean backbutton">
+				<i class="far fa-arrow-alt-circle-left"></i>
+			</a>
+
+
+			<div id="home" class=" container">
+				<section>
+					<div class="skills_content">
+						<div>
+							<h3 class='hardskills'>Master's final project</h3>
+							<h5>The extraction of musical instruments from bachata songs<br> using semantic segmentation
+								for audio source separation</h5>
+							<p class="project_cat_masters"><i>CNN / Semantic Segmentation / Meta-learning / Signal
+									Processing / STFT / PyTorch</i></p>
+						</div>
+						<div class="columns is-centered">
+							<div class="column sidepad">
+								<p>Could we teach a machine to separate the individual instruments within a bachata
+									(genre of latin music) song, given its typical instruments, polyrhythms and section
+									structure?
+									In this project this is what we attempted to do. To test our hypothesis and model
+									idea, first we studied a much simpler problem using the MNIST dataset: extract a
+									number (e.g. 5) given that it is present in a mixture of numbers (i.e. 5,1,3,9 drawn
+									on top of one another).
+									After successfully solving this problem with high accuracy, using U-Net architecture
+									and semantic-segmentation, we moved this model structure to our original, more
+									complex but highly similar problem, using audio domain.
+									Our dataset was a large collection of 4/8 beat-long-loops of individual instruments
+									played at particular sections within bachata songs (e.g. intro, chorus, verse,
+									bridge, outro).
+									The preprocessing and data preparation phase included selecting, sorting and
+									organising the right loops, followed by resampling and normalising the clips by
+									shrinking/expanding them using Fast Fourier Transform so that they all have
+									universal length/tempo (BPM) and can be used for ML purposes.
+									The model had 3 input clips: a mixture, the ground truth (present in the mixture),
+									and the target (same kind as but different to the target). Their spectrograms were
+									produced using STFT and a heatmap and fed into our U-Net like CNN.
+									Essentially our goal was to find a target-like pattern in the mixture and compute
+									the loss by comparing it to the ground truth pattern.
+									Having the mixture, target and ground truth clips chosen randomly, we could build
+									our input data on the fly. Once we achieved high enough performance, we moved on to
+									testing it on real bachata songs.
+									Careful preprocessing was needed on real songs in order to feed them to our model:
+									beat tracking to split a song into clips of 4 beats, resampling,
+									stretching/shrinking, STFT and heatmap to produce the input spectrograms.
+									The predicted clips were then stretched/shrank back to their original tempo and
+									concatenated to form the full-song-length extracted instrument.
+									<br><br>
+									<i>
+										Further improvements to be done: implement a GAN for more defined predictions,
+										possible residual blocks in the U-Net, training the model on original audio
+										quality,
+										examine the louder starting beat in the audio clips, estimate the downbeat
+										locations
+										instead of standard beat locations to resolve issues on songs that have intro.
+									</i>
+								</p>
+
+							</div>
+
+						</div>
+						<div class="columns is-centered">
+							<div id="botpad" class="column ">
+								<a href="projects/projectpaper.pdf" target="_blank" class="clean">
+									<h6 class="link_class"><b> PROJECT PAPER (PDF)</b></h6>
+								</a>
+							</div>
+							<div id="botpad" class="column ">
+								<a href="projects/POSTER.pdf" target="_blank" class="clean">
+									<h6 class="link_class"><b>POSTER (PDF)</b></h6>
+								</a>
+							</div>
+							<div id="botpad" class="column ">
+								<a href="https://github.com/tomilles/masters_project" target="_blank" class="clean">
+									<h6 class="link_class"><b>CODE (github)</b></h6>
+								</a>
+							</div>
+
+						</div>
+						<div class="columns is-centered">
+							<div id="botpad" class="column ">
+								<h5 style="padding-bottom: 10px;">RESULTS: NUMBER MODEL</h5>
+								<img class="legend" src="projects/pics/legend.png" loading="lazy" />
+								<img class="numbers" src="projects/pics/iteration_500.png" loading="lazy" />
+								<img class="numbers" src="projects/pics/iteration_2500.png" loading="lazy" />
+								<img class="numbers" src="projects/pics/iteration_5000.png" loading="lazy" />
+								<img class="numbers" src="projects/pics/iteration_7500.png" loading="lazy" />
+							</div>
+						</div>
+						<div class=" is-centered">
+							<div id="botpad" class="column sidepad">
+								<h5 style="padding-bottom: 10px;">RESULTS: AUDIO MODEL</h5>
+								<audio id="ex1_mix" src="/projects/sample_clips/example1/mix.wav"></audio>
+								<audio id="ex1_bass_pred" src="/projects/sample_clips/example1/bass_pred.wav"></audio>
+								<audio id="ex1_bass_true" src="/projects/sample_clips/example1/bass_true.wav"></audio>
+								<audio id="ex1_bongo_pred" src="/projects/sample_clips/example1/bongo_pred.wav"></audio>
+								<audio id="ex1_bongo_true" src="/projects/sample_clips/example1/bongo_true.wav"></audio>
+								<audio id="ex1_guira_pred" src="/projects/sample_clips/example1/guira_pred.wav"></audio>
+								<audio id="ex1_guira_true" src="/projects/sample_clips/example1/guira_true.wav"></audio>
+								<audio id="ex1_guitar_pred"
+									src="/projects/sample_clips/example1/guitar_pred.wav"></audio>
+								<audio id="ex1_guitar_true"
+									src="/projects/sample_clips/example1/guitar_true.wav"></audio>
+
+								<audio id="ex2_mix" src="/projects/sample_clips/example2/mix.wav"></audio>
+								<audio id="ex2_bass_pred" src="/projects/sample_clips/example2/bass_pred.wav"></audio>
+								<audio id="ex2_bass_true" src="/projects/sample_clips/example2/bass_true.wav"></audio>
+								<audio id="ex2_bongo_pred" src="/projects/sample_clips/example2/bongo_pred.wav"></audio>
+								<audio id="ex2_bongo_true" src="/projects/sample_clips/example2/bongo_true.wav"></audio>
+								<audio id="ex2_guira_pred" src="/projects/sample_clips/example2/guira_pred.wav"></audio>
+								<audio id="ex2_guira_true" src="/projects/sample_clips/example2/guira_true.wav"></audio>
+								<audio id="ex2_guitar_pred"
+									src="/projects/sample_clips/example2/guitar_pred.wav"></audio>
+								<audio id="ex2_guitar_true"
+									src="/projects/sample_clips/example2/guitar_true.wav"></audio>
+
+								<audio id="ex3_mix" src="/projects/sample_clips/example3/mix.wav"></audio>
+								<audio id="ex3_bass_pred" src="/projects/sample_clips/example3/bass_pred.wav"></audio>
+								<audio id="ex3_bass_true" src="/projects/sample_clips/example3/bass_true.wav"></audio>
+								<audio id="ex3_bongo_pred" src="/projects/sample_clips/example3/bongo_pred.wav"></audio>
+								<audio id="ex3_bongo_true" src="/projects/sample_clips/example3/bongo_true.wav"></audio>
+								<audio id="ex3_guira_pred" src="/projects/sample_clips/example3/guira_pred.wav"></audio>
+								<audio id="ex3_guira_true" src="/projects/sample_clips/example3/guira_true.wav"></audio>
+								<audio id="ex3_guitar_pred"
+									src="/projects/sample_clips/example3/guitar_pred.wav"></audio>
+								<audio id="ex3_guitar_true"
+									src="/projects/sample_clips/example3/guitar_true.wav"></audio>
+
+								<audio id="ex4_mix" src="/projects/sample_clips/example4/mix.wav"></audio>
+								<audio id="ex4_bass_pred" src="/projects/sample_clips/example4/bass_pred.wav"></audio>
+								<audio id="ex4_bass_true" src="/projects/sample_clips/example4/bass_true.wav"></audio>
+								<audio id="ex4_bongo_pred" src="/projects/sample_clips/example4/bongo_pred.wav"></audio>
+								<audio id="ex4_bongo_true" src="/projects/sample_clips/example4/bongo_true.wav"></audio>
+								<audio id="ex4_guira_pred" src="/projects/sample_clips/example4/guira_pred.wav"></audio>
+								<audio id="ex4_guira_true" src="/projects/sample_clips/example4/guira_true.wav"></audio>
+								<audio id="ex4_guitar_pred"
+									src="/projects/sample_clips/example4/guitar_pred.wav"></audio>
+								<audio id="ex4_guitar_true"
+									src="/projects/sample_clips/example4/guitar_true.wav"></audio>
+
+								<audio id="ex5_mix" src="/projects/sample_clips/example5/mix.wav"></audio>
+								<audio id="ex5_bass_pred" src="/projects/sample_clips/example5/bass_pred.wav"></audio>
+								<audio id="ex5_bass_true" src="/projects/sample_clips/example5/bass_true.wav"></audio>
+								<audio id="ex5_bongo_pred" src="/projects/sample_clips/example5/bongo_pred.wav"></audio>
+								<audio id="ex5_bongo_true" src="/projects/sample_clips/example5/bongo_true.wav"></audio>
+								<audio id="ex5_guira_pred" src="/projects/sample_clips/example5/guira_pred.wav"></audio>
+								<audio id="ex5_guira_true" src="/projects/sample_clips/example5/guira_true.wav"></audio>
+								<audio id="ex5_guitar_pred"
+									src="/projects/sample_clips/example5/guitar_pred.wav"></audio>
+								<audio id="ex5_guitar_true"
+									src="/projects/sample_clips/example5/guitar_true.wav"></audio>
+
+								<div class="scrollx">
+									<table>
+										<tr>
+											<th rowspan="2">
+												<h5>examples</h5>
+											</th>
+											<th rowspan="2">
+												<h5>mixture</h5>
+											</th>
+											<th colspan="2">
+												<h5>bongo</h5>
+											</th>
+											<th colspan="2">
+												<h5>guira</h5>
+											</th>
+											<th colspan="2">
+												<h5>bass</h5>
+											</th>
+											<th colspan="2">
+												<h5>guitar</h5>
+											</th>
+										</tr>
+										<tr>
+											<th>
+												<p>ground truth</p>
+											</th>
+											<th>
+												<p>prediction</p>
+											</th>
+											<th>
+												<p>ground truth</p>
+											</th>
+											<th>
+												<p>prediction</p>
+											</th>
+											<th>
+												<p>ground truth</p>
+											</th>
+											<th>
+												<p>prediction</p>
+											</th>
+											<th>
+												<p>ground truth</p>
+											</th>
+											<th>
+												<p>prediction</p>
+											</th>
+										</tr>
+										<tr>
+											<td>example 1</td>
+											<td><i class="far fa-play-circle playbutton"
+													onclick="document.getElementById('ex1_mix').play();changecolor(this)"></i>
+											</td>
+											<td><i class="far fa-play-circle playbutton"
+													onclick="document.getElementById('ex1_bongo_true').play();changecolor(this)"></i>
+											</td>
+											<td><i class="far fa-play-circle playbutton"
+													onclick="document.getElementById('ex1_bongo_pred').play();changecolor(this)"></i>
+											</td>
+											<td><i class="far fa-play-circle playbutton"
+													onclick="document.getElementById('ex1_guira_true').play();changecolor(this)"></i>
+											</td>
+											<td><i class="far fa-play-circle playbutton"
+													onclick="document.getElementById('ex1_guira_pred').play();changecolor(this)"></i>
+											</td>
+											<td><i class="far fa-play-circle playbutton"
+													onclick="document.getElementById('ex1_bass_true').play();changecolor(this)"></i>
+											</td>
+											<td><i class="far fa-play-circle playbutton"
+													onclick="document.getElementById('ex1_bass_pred').play();changecolor(this)"></i>
+											</td>
+											<td><i class="far fa-play-circle playbutton"
+													onclick="document.getElementById('ex1_guitar_true').play();changecolor(this)"></i>
+											</td>
+											<td><i class="far fa-play-circle playbutton"
+													onclick="document.getElementById('ex1_guitar_pred').play();changecolor(this)"></i>
+											</td>
+										</tr>
+										<tr>
+											<td>example 2</td>
+											<td><i class="far fa-play-circle playbutton"
+													onclick="document.getElementById('ex2_mix').play();changecolor(this)"></i>
+											</td>
+											<td><i class="far fa-play-circle playbutton"
+													onclick="document.getElementById('ex2_bongo_true').play();changecolor(this)"></i>
+											</td>
+											<td><i class="far fa-play-circle playbutton"
+													onclick="document.getElementById('ex2_bongo_pred').play();changecolor(this)"></i>
+											</td>
+											<td><i class="far fa-play-circle playbutton"
+													onclick="document.getElementById('ex2_guira_true').play();changecolor(this)"></i>
+											</td>
+											<td><i class="far fa-play-circle playbutton"
+													onclick="document.getElementById('ex2_guira_pred').play();changecolor(this)"></i>
+											</td>
+											<td><i class="far fa-play-circle playbutton"
+													onclick="document.getElementById('ex2_bass_true').play();changecolor(this)"></i>
+											</td>
+											<td><i class="far fa-play-circle playbutton"
+													onclick="document.getElementById('ex2_bass_pred').play();changecolor(this)"></i>
+											</td>
+											<td><i class="far fa-play-circle playbutton"
+													onclick="document.getElementById('ex2_guitar_true').play();changecolor(this)"></i>
+											</td>
+											<td><i class="far fa-play-circle playbutton"
+													onclick="document.getElementById('ex2_guitar_pred').play();changecolor(this)"></i>
+											</td>
+										</tr>
+										<tr>
+											<td>example 3</td>
+											<td><i class="far fa-play-circle playbutton"
+													onclick="document.getElementById('ex3_mix').play();changecolor(this)"></i>
+											</td>
+											<td><i class="far fa-play-circle playbutton"
+													onclick="document.getElementById('ex3_bongo_true').play();changecolor(this)"></i>
+											</td>
+											<td><i class="far fa-play-circle playbutton"
+													onclick="document.getElementById('ex3_bongo_pred').play();changecolor(this)"></i>
+											</td>
+											<td><i class="far fa-play-circle playbutton"
+													onclick="document.getElementById('ex3_guira_true').play();changecolor(this)"></i>
+											</td>
+											<td><i class="far fa-play-circle playbutton"
+													onclick="document.getElementById('ex3_guira_pred').play();changecolor(this)"></i>
+											</td>
+											<td><i class="far fa-play-circle playbutton"
+													onclick="document.getElementById('ex3_bass_true').play();changecolor(this)"></i>
+											</td>
+											<td><i class="far fa-play-circle playbutton"
+													onclick="document.getElementById('ex3_bass_pred').play();changecolor(this)"></i>
+											</td>
+											<td><i class="far fa-play-circle playbutton"
+													onclick="document.getElementById('ex3_guitar_true').play();changecolor(this)"></i>
+											</td>
+											<td><i class="far fa-play-circle playbutton"
+													onclick="document.getElementById('ex3_guitar_pred').play();changecolor(this)"></i>
+											</td>
+										</tr>
+										<tr>
+											<td>example 4</td>
+											<td><i class="far fa-play-circle playbutton"
+													onclick="document.getElementById('ex4_mix').play();changecolor(this)"></i>
+											</td>
+											<td><i class="far fa-play-circle playbutton"
+													onclick="document.getElementById('ex4_bongo_true').play();changecolor(this)"></i>
+											</td>
+											<td><i class="far fa-play-circle playbutton"
+													onclick="document.getElementById('ex4_bongo_pred').play();changecolor(this)"></i>
+											</td>
+											<td><i class="far fa-play-circle playbutton"
+													onclick="document.getElementById('ex4_guira_true').play();changecolor(this)"></i>
+											</td>
+											<td><i class="far fa-play-circle playbutton"
+													onclick="document.getElementById('ex4_guira_pred').play();changecolor(this)"></i>
+											</td>
+											<td><i class="far fa-play-circle playbutton"
+													onclick="document.getElementById('ex4_bass_true').play();changecolor(this)"></i>
+											</td>
+											<td><i class="far fa-play-circle playbutton"
+													onclick="document.getElementById('ex4_bass_pred').play();changecolor(this)"></i>
+											</td>
+											<td><i class="far fa-play-circle playbutton"
+													onclick="document.getElementById('ex4_guitar_true').play();changecolor(this)"></i>
+											</td>
+											<td><i class="far fa-play-circle playbutton"
+													onclick="document.getElementById('ex4_guitar_pred').play();changecolor(this)"></i>
+											</td>
+										</tr>
+										<tr>
+											<td class="last-left">example 5</td>
+											<td><i class="far fa-play-circle playbutton"
+													onclick="document.getElementById('ex5_mix').play();changecolor(this)"></i>
+											</td>
+											<td><i class="far fa-play-circle playbutton"
+													onclick="document.getElementById('ex5_bongo_true').play();changecolor(this)"></i>
+											</td>
+											<td><i class="far fa-play-circle playbutton"
+													onclick="document.getElementById('ex5_bongo_pred').play();changecolor(this)"></i>
+											</td>
+											<td><i class="far fa-play-circle playbutton"
+													onclick="document.getElementById('ex5_guira_true').play();changecolor(this)"></i>
+											</td>
+											<td><i class="far fa-play-circle playbutton"
+													onclick="document.getElementById('ex5_guira_pred').play();changecolor(this)"></i>
+											</td>
+											<td><i class="far fa-play-circle playbutton"
+													onclick="document.getElementById('ex5_bass_true').play();changecolor(this)"></i>
+											</td>
+											<td><i class="far fa-play-circle playbutton"
+													onclick="document.getElementById('ex5_bass_pred').play();changecolor(this)"></i>
+											</td>
+											<td><i class="far fa-play-circle playbutton"
+													onclick="document.getElementById('ex5_guitar_true').play();changecolor(this)"></i>
+											</td>
+											<td class="last-right"><i class="far fa-play-circle playbutton"
+													onclick="document.getElementById('ex5_guitar_pred').play();changecolor(this)"></i>
+											</td>
+										</tr>
+
+									</table>
+								</div>
+							</div>
+						</div>
+						<div class=" is-centered">
+							<div id="botpad" class="column sidepad">
+								<h5 style="padding-bottom: 10px;">RESULTS ON BACHATA SONGS</h5>
+
+
+
+								<div class="scrollx">
+									<table class="songs">
+										<tr>
+											<th rowspan="2">
+												<h5 class="fixwidth">artist &<br>song name</h5>
+											</th>
+											<th rowspan="2">
+												<h5>original</h5>
+											</th>
+											<th colspan="4">
+												<h5>extractions / predictions</h5>
+											</th>
+											<th rowspan="2">
+												<h5 class="padright_assessment">relative<br>assessment</h5>
+											</th>
+										</tr>
+										<tr>
+											<th>
+												<p>bongo</p>
+											</th>
+											<th>
+												<p>guira</p>
+											</th>
+											<th>
+												<p>bass</p>
+											</th>
+											<th>
+												<p>guitar</p>
+											</th>
+
+										</tr>
+										<tr>
+											<td>Prophex:<br>Vanidosa</td>
+											<td>
+												<div class="realsongs"><audio controls onplay="addborder(this)"
+														onpause="removeborder(this)">
+														<source src="/projects/song_examples/Vanidosa/original.wav"
+															type="audio/wav">
+													</audio></div>
+											</td>
+											<td>
+												<div class="realsongs"><audio controls onplay="addborder(this)"
+														onpause="removeborder(this)">
+														<source src="/projects/song_examples/Vanidosa/bongo.wav"
+															type="audio/wav">
+													</audio></div>
+											</td>
+											<td>
+												<div class="realsongs"><audio controls onplay="addborder(this)"
+														onpause="removeborder(this)">
+														<source src="/projects/song_examples/Vanidosa/guira.wav"
+															type="audio/wav">
+													</audio></div>
+											</td>
+											<td>
+												<div class="realsongs"><audio controls onplay="addborder(this)"
+														onpause="removeborder(this)">
+														<source src="/projects/song_examples/Vanidosa/bass.wav"
+															type="audio/wav">
+													</audio></div>
+											</td>
+											<td>
+												<div class="realsongs"><audio controls onplay="addborder(this)"
+														onpause="removeborder(this)">
+														<source src="/projects/song_examples/Vanidosa/guitar.wav"
+															type="audio/wav">
+													</audio></div>
+											</td>
+											<td class="padright_assessment">good</td>
+										</tr>
+										<tr>
+											<td>Lucho Panic:<br>El Guardaespaldas</td>
+											<td>
+												<div class="realsongs"><audio controls onplay="addborder(this)"
+														onpause="removeborder(this)">
+														<source
+															src="/projects/song_examples/El Guardaespaldas/original.wav"
+															type="audio/wav">
+													</audio></div>
+											</td>
+											<td>
+												<div class="realsongs"><audio controls onplay="addborder(this)"
+														onpause="removeborder(this)">
+														<source
+															src="/projects/song_examples/El Guardaespaldas/bongo.wav"
+															type="audio/wav">
+													</audio></div>
+											</td>
+											<td>
+												<div class="realsongs"><audio controls onplay="addborder(this)"
+														onpause="removeborder(this)">
+														<source
+															src="/projects/song_examples/El Guardaespaldas/guira.wav"
+															type="audio/wav">
+													</audio></div>
+											</td>
+											<td>
+												<div class="realsongs"><audio controls onplay="addborder(this)"
+														onpause="removeborder(this)">
+														<source src="/projects/song_examples/El Guardaespaldas/bass.wav"
+															type="audio/wav">
+													</audio></div>
+											</td>
+											<td>
+												<div class="realsongs"><audio controls onplay="addborder(this)"
+														onpause="removeborder(this)">
+														<source
+															src="/projects/song_examples/El Guardaespaldas/guitar.wav"
+															type="audio/wav">
+													</audio></div>
+											</td>
+											<td class="padright_assessment">good</td>
+										</tr>
+										<tr>
+											<td>Prince Royce:<br>Te robare</td>
+											<td>
+												<div class="realsongs"><audio controls onplay="addborder(this)"
+														onpause="removeborder(this)">
+														<source src="/projects/song_examples/Te robare/original.wav"
+															type="audio/wav">
+													</audio></div>
+											</td>
+											<td>
+												<div class="realsongs"><audio controls onplay="addborder(this)"
+														onpause="removeborder(this)">
+														<source src="/projects/song_examples/Te robare/bongo.wav"
+															type="audio/wav">
+													</audio></div>
+											</td>
+											<td>
+												<div class="realsongs"><audio controls onplay="addborder(this)"
+														onpause="removeborder(this)">
+														<source src="/projects/song_examples/Te robare/guira.wav"
+															type="audio/wav">
+													</audio></div>
+											</td>
+											<td>
+												<div class="realsongs"><audio controls onplay="addborder(this)"
+														onpause="removeborder(this)">
+														<source src="/projects/song_examples/Te robare/bass.wav"
+															type="audio/wav">
+													</audio></div>
+											</td>
+											<td>
+												<div class="realsongs"><audio controls onplay="addborder(this)"
+														onpause="removeborder(this)">
+														<source src="/projects/song_examples/Te robare/guitar.wav"
+															type="audio/wav">
+													</audio></div>
+											</td>
+											<td class="padright_assessment">fair</td>
+										</tr>
+										<tr>
+											<td>Kiko Rodriguez:<br>Vagabundo, borracho & Loco</td>
+											<td>
+												<div class="realsongs"><audio controls onplay="addborder(this)"
+														onpause="removeborder(this)">
+														<source
+															src="/projects/song_examples/Vagabundo, borracho & Loco/original.wav"
+															type="audio/wav">
+													</audio></div>
+											</td>
+											<td>
+												<div class="realsongs"><audio controls onplay="addborder(this)"
+														onpause="removeborder(this)">
+														<source
+															src="/projects/song_examples/Vagabundo, borracho & Loco/bongo.wav"
+															type="audio/wav">
+													</audio></div>
+											</td>
+											<td>
+												<div class="realsongs"><audio controls onplay="addborder(this)"
+														onpause="removeborder(this)">
+														<source
+															src="/projects/song_examples/Vagabundo, borracho & Loco/guira.wav"
+															type="audio/wav">
+													</audio></div>
+											</td>
+											<td>
+												<div class="realsongs"><audio controls onplay="addborder(this)"
+														onpause="removeborder(this)">
+														<source
+															src="/projects/song_examples/Vagabundo, borracho & Loco/bass.wav"
+															type="audio/wav">
+													</audio></div>
+											</td>
+											<td>
+												<div class="realsongs"><audio controls onplay="addborder(this)"
+														onpause="removeborder(this)">
+														<source
+															src="/projects/song_examples/Vagabundo, borracho & Loco/guitar.wav"
+															type="audio/wav">
+													</audio></div>
+											</td>
+											<td class="padright_assessment">poor</td>
+										</tr>
+
+
+
+									</table>
+								</div>
+							</div>
+						</div>
+
+						<div id="botpad" class="column poster">
+							<img class="poster" src="projects/POSTER.png" loading="lazy" />
+						</div>
+
+					</div>
+				</section>
+
+
+
+
+
+
+
+			</div>
+
+
+			</section>
+		</div>
+	</div>
+
+	<!-- Footer -->
+	<div id="footer">
+
+
+		<header class="major container medium last">
+			<!-- <h2>some motivational / intro stuff here</h2> -->
+			<ul class="icons">
+
+				<li><a href="mailto:tomilles97@gmail.com">
+						<div class="icon solid fas fa-at"></div>
+						<div class="contact_footer">tomilles97@gmail.com</div>
+					</a></li>
+				<li><a href="https://www.linkedin.com/in/tomilles/" target="_blank">
+						<div class="icon brands fab fa-linkedin-in"></div>
+						<div class="contact_footer">linkedin.com/in/tomilles</div>
+					</a></li>
+				<li><a href="https://github.com/tomilles" target="_blank">
+						<div class="icon brands fa-github"></div>
+						<div class="contact_footer">github.com/tomilles</div>
+					</a></li>
+				<li><a href="https://www.kaggle.com/tomilles" target="_blank">
+						<div class="icon brands fab fa-kaggle"></div>
+						<div class="contact_footer">kaggle.com/tomilles</div>
+					</a></li>
+
+			</ul>
+		</header>
+
+
+
+
+
+
+
+
+	</div>
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+
+</body>
+
+</html>
