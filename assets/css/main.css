@@ -3164,6 +3164,7 @@ input::-moz-focus-inner {
 /* SKILLS SECTION */
 		.line:before {
 			background: #5b5b5b7c;
+			opacity: 75%;
 			content: '';
 			display: block;
 			height: 1px;
@@ -3508,8 +3509,23 @@ input::-moz-focus-inner {
 		} */
 		.courses{
 			padding-top: 0.6em;
+			margin-bottom: 0.0em;
 		}
-		
+		.courses_line:before{
+			background: #5b5b5b7c;
+			opacity: 75%;
+			content: '';
+			display: block;
+			height: 1px;
+			margin-bottom: 1.5em;
+			margin-top: 1.5em;
+			left: 0;
+			position: relative;
+			width: 80%;
+			left: 10%;
+			
+		}
+	
 		
 		#freetime_list ul li:nth-child(n+2):before {
 			padding-right: 0.5em;
