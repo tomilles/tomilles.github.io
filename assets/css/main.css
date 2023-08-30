@@ -3390,6 +3390,11 @@ input::-moz-focus-inner {
 			justify-content: center; 
 			text-align: center;
 		}
+
+		.list_item_padding{
+			padding-bottom: 0.5em;
+
+		}
 		.flex-container{
 
 			display: inline-flex;
